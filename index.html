@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Snush Youtube Downloader</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+
+    <div class="main-graident css-selector"></div>
+    <section class="wave"></section>
+
+    <header id="navbar " class="animate__animated animate__fadeInDown">
+        <a href="#" class="logo">YTDL</a>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">DONATE</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">TOS</a></li>
+            <li><a href="#">STATUS</a></li>
+            <li><a href="#">API</a></li>
+        </ul>
+    </header>
+
+    <div class="all">
+        <div id="all-content">
+        </div>
+
+        <section class="banner"></section>
+        <div class="sa  ">
+            <div class="soup">
+                <input style="width: 300px;" class='URL-input convert-button' id="urlInput" placeholder='https://www.youtube.com/Ganoosh' />
+                <!--        <select class='opt select'>
+                  <option value='mp4'>Video</option>
+                  <option value='mp3'>Audio</option>
+                  <option value='info'>Info</option>
+                  </select>
+                  -->
+                <button class='ripple convert-button centerX convert-btn' onclick="callFunctions()" id='btn'>Convert</button>
+            </div>
+        </div>
+        <div class="arrow-engine" id="multi-menu1"></div>
+        <div class="below-engine" id="multi-menu">
+            <img id="bigpic">
+            <p id="title"></p>
+            <p id="Duration"></p>
+
+            <button onclick="redirectMp4()" class='ripple convert-btn button2' id='btn'>Download Video</button>
+            <button onclick="redirectMp3()" class='ripple convert-btn button3' id='btn'>Download Audio</button>
+            <p class="copyright-notice">Notice: Download of copyrighted content is prohibited.</p>
+
+
+        </div>
+
+    </div>
+    <div id="cookieConsent">
+        <div id="closeCookieConsent">x</div>
+        Hey! Thanks for stopping! Just a quick reminder that by using this service you are agreeing to all liability of the content you download and are agreeing to cookie usage, with that said Happy Downloading! <a class="cookieConsentOK">Got it!</a>
+    </div>
+    <!--
+         <div style="display:none;" id="blockScreen" class="blockScreen">&nbsp;</div>
+         <div style="" id="popup" class="container-main">
+         <div class="container">
+         <div class="images"><img src="//media.getsitecontrol.com/prod2/images/3130/5f05721cc8991c96f75d45c7360eb858_170082960.gif" class="image" style="position: absolute; object-fit: contain; object-position: 50% 100%; left: 0px; top: -100px; transform: rotate(0deg); width: 100%; height: 288px;"></div>
+         <div class="body">
+         	<div class="content no-fields">
+         		<p class="description">
+         		<div>Hey! Thanks for stopping! Quick Thing! By using this service you are agreeing to all liability of the content you download and are agreeing to cookie usage, with that said Happy Downloading!</div>
+         		</p>
+         		<form novalidate="" class="form valid pristine">
+         			<div class="buttons"><button id="popup" type="button" class="button primary">Got it!</button></div>
+         		</form>
+         		<p class="note">Copyright ©Ganoosh 2020</p>
+         	</div>
+         </div>
+         </div>
+         -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="/js/script.js"></script>
+    <script src="/js/duration.js"></script>
+    <script src="/js/download.js"></script>
+
+
+    <script>
+        async function callFunctions() {
+            await getDuration();
+
+        };
+    </script>
+</body>
+
+</html>
