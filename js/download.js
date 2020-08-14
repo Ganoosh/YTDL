@@ -1,12 +1,10 @@
-let serverURL = 'https://ytdl.ganoosh.repl.co';
-urlInput = document.getElementById('urlInput').value;
+var serverURL = 'https://ytdl.ganoosh.repl.co';
+var urlInput = $("#urlInput").val()
 
 function redirectMp4() {
-    console.log(urlInput)
     window.location.href = `${serverURL}/api/ytdlv?url=${urlInput}`;
 }
 
 function redirectMp3() {
-    console.log(urlInput)
     window.location.href = `${serverURL}/api/ytdla?url=${urlInput}`;
 }
