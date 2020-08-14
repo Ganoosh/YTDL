@@ -1,14 +1,13 @@
 async function getDuration() {
-    var thumbImage = document.getElementById('bigpic');
-    urlInput = document.getElementById('urlInput').value;
+    var thumbImage = $("#bigpig");
+    var urlInput = $("#urlInput").val()
 
     await $.getJSON('https://ytdl.ganoosh.repl.co/api/ytdli?url=' + urlInput, function(data) {
-        console.log(data.lengthTotal);
-        document.getElementById('Duration').innerHTML = "Duration: " + data.lengthTotal;
-        document.getElementById('bigpic').src = data.thumbnail_url;
-        document.getElementById('title').innerHTML = "Title: " + data.title;
+        $("#Duration").html("Duration: " + data.lengthTotal);
+        $("#bigpic").attr('src', data.thumbnail_url);
+        $("#title").html("Title: " + data.title);
 
     });
-    document.getElementById('multi-menu').style.display = "block";
-    document.getElementById('multi-menu1').style.display = "block";
+    $("#multi-menu").css("display", "block");
+    $("#multi-menu1").css("display", "block");
 }
